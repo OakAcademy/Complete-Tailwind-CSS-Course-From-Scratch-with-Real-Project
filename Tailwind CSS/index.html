@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              home: "Roboto",
+            },
+            colors: {
+              myAmber: "#84cc16",
+            },
+            spacing: {
+              mrg: "100px",
+            },
+
+            screens: {
+              md: "960px",
+              sm: "450px",
+              // => @media (min-width: 960px) { ... }
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .btn {
+          @apply bg-red-500 font-bold p-3 uppercase rounded-full hover:bg-green-500 transition-colors duration-500 focus:outline-none focus:ring focus:ring-red-500 focus:ring-offset-2;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="text-sm md:text-base">
+    <header class="bg-indigo-500 pt-4 pb-3 border-b-8 border-red-900">
+      <ul class="flex items-center py-3 justify-around flex-col sm:flex-row">
+        <li><a href="#" class="hover:text-red-500 hover:underline">Home</a></li>
+        <li><a href="form.html">Form</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <main
+      class="h-screen border border-red-500 grid grid-rows-[1fr_2fr_auto] font-home"
+    >
+      <div
+        class="h-full border border-red-500 bg-blue-500 grid grid-cols-2 gap-4"
+      >
+        <div class="pl-[10px]">
+          <h1
+            class="sm:max-xl:text-red-500 text-myAmber text-center font-bold text-3xl my-5"
+          >
+            Hello world!
+          </h1>
+          <p class="text-red-600 text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            neque provident maiores veritatis fugit a facilis necessitatibus
+            iure quo doloribus qui est pariatur, ut repudiandae maxime iusto.
+            Eveniet, saepe porro.
+          </p>
+        </div>
+        <div class="flex justify-center items-center">
+          <img
+            class="w-[50px] border border-red-500 rounded-full"
+            src="tailwind.png"
+            alt="image"
+          />
+        </div>
+      </div>
+      <div class="h-full border border-red-500 bg-red-300">
+        <h3
+          class="text-xl text-center uppercase font-bold my-5 md:text-red-500"
+        >
+          Header
+        </h3>
+        <p class="tracking-widest">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
+          temporibus.
+        </p>
+        <img
+          class="w-[50px] border border-red-500 rounded-full"
+          src="tailwind.png"
+          alt="image"
+        />
+        <div class="text-center">
+          <button class="btn">Click 2</button>
+          <button
+            class="bg-red-500 font-bold p-3 uppercase rounded-full hover:bg-green-500 transition-colors duration-500 focus:outline-none focus:ring focus:ring-red-500 focus:ring-offset-2"
+          >
+            Click
+          </button>
+        </div>
+      </div>
+      <div class="h-full border border-red-500 bg-blue-700">
+        <h3
+          class="text-xl text-center uppercase font-bold my-5 md:text-red-500"
+        >
+          Header
+        </h3>
+        <p class="tracking-widest">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
+          temporibus.
+        </p>
+        <img
+          class="w-16 border border-red-500 rounded-full"
+          src="tailwind.png"
+          alt="image"
+        />
+      </div>
+    </main>
+  </body>
+</html>
